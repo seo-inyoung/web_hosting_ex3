@@ -1,0 +1,408 @@
+body {
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+/* 네비 바 */
+.navbar{
+    width: 100%;
+    box-shadow: 0 0 20px -2px rgba(0, 0, 0, 0.7);
+    background-color: #ffffff;
+    border: none;
+    position: relative;
+}
+
+.navbar-toggle {
+    background: linear-gradient(to right, #5D813F, #8DA263, #D5D39B);
+    border: none;
+}
+
+.navbar-nav {
+    float: right;
+}
+
+.navbar-brand {
+    display: inline-block;
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(to right, #5D813F, #8DA263, #D5D39B);
+}
+
+.navbar-brand span {
+    background: none;
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+    /* background: linear-gradient(to right, #5D813F, #8DA263, #D5D39B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+.navbar-brand:hover {
+    background: none;
+}
+
+.navbar-brand:hover span {
+    background: linear-gradient(to right, #5D813F, #8DA263, #D5D39B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-txt {
+    font-size: 1.4em;
+    text-align: center;
+    margin-right: 10px;
+    color: rgb(51, 50, 50);
+}
+
+.nav-txt a {
+    color: rgb(92, 92, 92);
+}
+
+.icon-bar {
+    background-color: white;
+}
+
+/* 텍스트 영역 */
+.txt {
+    font-family: 'Lobster', cursive;
+    margin-top: 2%;
+    text-align: center;
+    font-size: 50px;
+    color: rgb(99, 98, 98);
+    /* text-shadow: 2px 2px 2px rgb(192, 191, 191); */
+}
+
+@keyframes txtColor {
+    0% {
+        color: #5D813F;
+    }
+
+    33% {
+        color: #e29e8d;
+    }
+
+    66% {
+        color: #5b6884;
+    }
+
+    100% {
+        color: #e9c77b;
+    }
+}
+
+.txt span {
+    animation: txtColor 1.8s infinite alternate;
+}
+
+.txt2{
+    text-align: center;
+    margin-top: 0.6%;
+    font-size: 1.2em;
+    font-family: monospace;
+    color: rgb(161, 160, 160);
+}
+
+/* 선택 영역 */
+.container {
+    width: 80%;
+    height: 600px;
+    margin-left: 10%;
+    margin-top: 2%;
+    background-color: white;
+    box-shadow: 5px 5px 10px -2px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.section {
+    width: 93%;
+    height: 530px;
+    margin-left: 3%;
+    margin-top: 3%;
+}
+
+
+form {
+    width: 50%;
+}
+
+.where {
+    display: block;
+    margin: 25px 15px;
+    font-size: 11px;
+    color: #000;
+    text-decoration: none;
+    font-family: verdana;
+    font-style: italic;
+}
+
+.filebox input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.filebox label {
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    display: inline-block;
+    text-align: center;
+    padding-top: 1%;
+    color: #999;
+    height: 40px;
+    width: 10%;
+    line-height: normal;
+    vertical-align: middle;
+    background: linear-gradient(to right, #5D813F, #a7c076);
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 1.2em;
+    transition-duration: 0.5s;
+}
+.filebox label:hover {
+    width: 11%;
+    left: 4.5%;
+}
+
+
+
+.filebox .send-btn {
+    position: absolute;
+    top: 80%;
+    left: 36%;
+    font-weight: 400;
+    font-size: 1.2em;
+    height: 40px;
+    width: 10%;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #5D813F, #a7c076);
+    transition-duration: 0.5s;
+}
+
+.send-btn:hover {
+    width: 11%;
+    left: 35.5%;
+}
+
+
+
+/* named upload */
+.filebox .upload-name {
+    position: absolute;
+    top: 81%;
+    left: 16%;
+    display: inline-block;
+    padding: .5em .75em;
+    line-height: normal;
+    vertical-align: middle;
+    background-color: #f5f5f5;
+    border: 1px solid #ebebeb;
+    border-bottom-color: #e2e2e2;
+    border-radius: .25em;
+    -webkit-appearance: none;
+    /* 네이티브 외형 감추기 */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+
+/* imaged preview */
+
+@media(min-width: 768px) {
+    .filebox .upload-display {
+        display: inline-block;
+        margin-right: 5px;
+        margin-bottom: 0;
+    }
+}
+
+
+.preview-image {
+    margin-top: 50px;
+    margin-left: 90px;
+    width: 330px;
+    height: 330px;
+
+    border-radius: 2px;
+    text-align: center;
+    background-color: rgb(235, 234, 234);
+    background-image: url('./media/none_file1.png');
+    background-size: contain;
+
+}
+
+.filebox .upload-thumb-wrap {
+    display: inline-block;
+    width: 330px;
+    height: 330px;
+    padding: 5px;
+}
+
+
+.filebox .upload-display img {
+    vertical-align: middle;
+    max-width: 100%;
+    width: 100% \9;
+    height: 100%;
+    max-height: 100%;
+}
+
+.filebox.bs3-primary label {
+    color: #fff;
+}
+
+
+
+
+.r-link {
+    display: var(--rLinkDisplay, inline-flex) !important;
+}
+
+.r-link[href] {
+    color: var(--rLinkColor) !important;
+    text-decoration: var(--rLinkTextDecoration, none) !important;
+}
+
+/* 
+outlined text
+  */
+.outlined-text {
+    --uiOutlinedTextWeight: var(--outlinedTextWeight, 2px);
+    --uiOutlinedTextLineColor: var(--outlinedTextLineColor, currentColor);
+    padding: var(--outlinedTextPadding, .25rem);
+}
+
+.outlined-text:not(a):not(button) {
+    display: var(--outlinedTextDisplay, inline-flex);
+}
+
+.outlined-text.r-link {
+    --rLinkDisplay: var(--outlinedTextDisplay);
+}
+
+.outlined-text::before,
+.outlined-text::after {
+    width: 100%;
+    height: var(--uiOutlinedTextWeight);
+    left: 0;
+}
+
+.outlined-text::before {
+    top: 0;
+}
+
+.outlined-text::after {
+    bottom: 0;
+}
+
+.outlined-text__label::before,
+.outlined-text__label::after {
+    width: var(--uiOutlinedTextWeight);
+    height: 100%;
+    top: 0;
+}
+
+.outlined-text__label::before {
+    left: 0;
+}
+
+.outlined-text__label::after {
+    right: 0;
+}
+
+.outlined-text::before,
+.outlined-text::after,
+.outlined-text__label::before,
+.outlined-text__label::after {
+    content: "";
+    background-color: var(--uiOutlinedTextLineColor);
+    position: absolute;
+}
+
+.text-underlined {
+    --uiTextUnderlinedLineHeight: var(--textUnderlinedLineHeight, 2px);
+    /* 1 */
+    --uiTextUnderlinedLineGap: var(--textUnderlinedLineGap, .5rem);
+    --uiTextUnderlinedPaddingBottom: calc(var(--uiTextUnderlinedLineHeight) + var(--uiTextUnderlinedLineGap));
+
+    padding-bottom: var(--uiTextUnderlinedPaddingBottom) !important;
+    position: var(--textUnderlinedPosition, relative) !important;
+}
+
+/*
+=====
+CORE STYLES
+=====
+*/
+.link {
+    --rLinkDisplay: var(--linkDisplay);
+    --rLinkColor: var(--linkTextColor);
+    --uiLinkTextColorHover: var(--linkTextColorHover);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.link__label {
+    display: block;
+}
+
+/* 
+effect 1 
+*/
+.link1::before {
+    transform: translate3d(-105%, 0, 0);
+}
+
+.link1::after {
+    transform: translate3d(105%, 0, 0);
+}
+
+.link1 .link__label::before {
+    transform: translate3d(0%, -100%, 0);
+}
+
+.link1 .link__label::after {
+    transform: translate3d(0%, 100%, 0);
+}
+
+.link1::before,
+.link1::after,
+.link1 .link__label::before,
+.link1 .link__label::after {
+    transition-timing-function: ease-out;
+    transition-duration: .2s, .15s;
+    transition-delay: 0s, .15s;
+}
+
+.link1:hover::before,
+.link1:hover::after,
+.link1:hover .link__label::before,
+.link1:hover .link__label::after {
+    transform: translate3d(0, 0, 0);
+    transition-duration: .25s;
+    transition-delay: 0s;
+}
+
+
+:root {
+    --outlinedTextWeight: 2px;
+    --outlinedTextLineColor: #B8C084;
+}
+
+/* border-image: linear-gradient(to left, #1F4386, #268EA4, #5FC3B1 ); */
